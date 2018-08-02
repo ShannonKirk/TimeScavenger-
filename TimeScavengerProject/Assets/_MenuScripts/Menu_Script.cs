@@ -5,19 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Menu_Script : MonoBehaviour {
 
-    public void ToGame()
+    public void PlayGame()
     {
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void QuitGame()
+    {
+        Debug.Log("Quiting Game.....");
+        Application.Quit();
+    }
+
+
 }
